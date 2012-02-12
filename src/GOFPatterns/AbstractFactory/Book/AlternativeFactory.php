@@ -17,7 +17,8 @@ use InvalidArgumentException;
  *   languages where classes are 1st class objects)
  *
  * In this example we have a map of classes statically but the implementation explained in the GoF book clearly states
- * that the concrete factory must be initialized with "prototypes" or "classes" of products.
+ * that the concrete factory must be initialized with "prototypes" or "classes" of products. Also, just for example
+ * purposes, this constructor creates products from two different families.
  *
  * The Doctrine DBAL Type factory method initially uses a static map of classes and provides an interface to add more
  * types (see addType method). It's not an Abstract Factory however.

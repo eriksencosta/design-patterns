@@ -21,5 +21,15 @@ class AbstractFactoryTest extends PHPUnit_Framework_TestCase
 
         // "Defining extensible factories" is not a problem in dinamically type languages.
         $this->assertEquals(1, $factory->create('productB')->differentOperation(1));
+
+        $factoryA = new Book\ClassBasedFactory(array(
+            'productA' => 'GOFPatterns\AbstractFactory\Book\FamilyA\Product'
+        ));
+        $this->assertInstanceOf('GOFPatterns\AbstractFactory\Book\FamilyA\Product', $factoryA->create('productA'));
+
+        $factoryB = new Book\ClassBasedFactory(array(
+            'productB' => 'GOFPatterns\AbstractFactory\Book\FamilyB\Product'
+        ));
+        $this->assertInstanceOf('GOFPatterns\AbstractFactory\Book\FamilyB\Product', $factoryB->create('productB'));
     }
 }

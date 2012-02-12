@@ -14,7 +14,7 @@ class Composite extends Component
      *
      * @var ArrayCollection
      */
-    private $children;
+    protected $children;
 
     public function __construct()
     {

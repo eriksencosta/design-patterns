@@ -2,7 +2,7 @@
 
 namespace GOFPatterns\Composite\Book;
 
-use GOFPatterns\Exception\NotImplementException;
+use GOFPatterns\Exception\NotImplementedException;
 
 abstract class Component implements ComponentInterface
 {

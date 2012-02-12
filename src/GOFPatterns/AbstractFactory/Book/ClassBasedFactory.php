@@ -4,6 +4,9 @@ namespace GOFPatterns\AbstractFactory\Book;
 
 /**
  * See AlternativeFactory class.
+ *
+ * This is also an example of the "Language-specific variants and issues" implementation topic of Factory Method
+ * pattern.
  */
 class ClassBasedFactory
 {

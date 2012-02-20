@@ -3,6 +3,9 @@
 namespace GOFPatterns\Composite\Book;
 
 /**
+ * Since this pattern can make a design overly general (consequence), it's common to see it being used with other
+ * patterns like Chain of Resposibility, Decorator, Flyweight, Iterator and Visitor.
+ *
  * Quoted in other classes:
  *
  * - "Should Component implement a list of Components?". See Component class.
@@ -18,7 +21,9 @@ interface ComponentInterface
     function operation();
 
     /**
-     * "Declaring the child management operations".
+     * "Declaring the child management operations". This example emphasize transparency. The client will treat all
+     * components uniformly. (implementation)
+     *
      * "Child ordering". See Composite class.
      *
      * @param ComponentInterface $child

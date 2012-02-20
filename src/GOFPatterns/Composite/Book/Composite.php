@@ -9,8 +9,9 @@ class Composite extends Component
     /**
      * "Child ordering". Iterator pattern can help if orders matters. The Doctrine ArrayCollection implements this
      * the Iterator pattern (implementing PHP Spl classes like ArrayAccess, Countable and IteratorAggregate).
+     * (implementation)
      *
-     * "What's the best data structure for storing components?". It depends on efficiency.
+     * "What's the best data structure for storing components?". It depends on efficiency. (implementation)
      *
      * @var ArrayCollection
      */

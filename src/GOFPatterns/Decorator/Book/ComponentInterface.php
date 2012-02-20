@@ -9,7 +9,13 @@ namespace GOFPatterns\Decorator\Book;
  * - The definition of the data representation should be deferred to subclasses; otherwise the complexity of the
  *   Component class might make the decorators too heavyweight to use in quantity
  *
- * Making the Component interface is a good choice IMHO.
+ * Making the Component interface is a good choice IMHO. (implementation)
+ *
+ * Quoted in other classes:
+ *
+ * - "Interface conformance". See Component and Decorator classes. (implementation)
+ * - "Omitting the abstract Decorator class". See Decorator class. (implementation)
+ * - "Changing the skin of an object versus changing its guts". See Decorator class. (implementation)
  */
 interface ComponentInterface
 {

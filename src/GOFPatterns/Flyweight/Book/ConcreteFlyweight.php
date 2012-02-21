@@ -9,7 +9,7 @@ class ConcreteFlyweight extends Flyweight
     /**
      * "Clients should not instantiate ConcreteFlyweights directly". (collaborations)
      *
-     * Some designs enforces the above statment by defining a private or protected constructor. This is fine since it
+     * Some designs enforces the above statement by defining a private or protected constructor. This is fine since it
      * will still be possible to unit test a ConcreteFlyweight through it's interface.
      */
     public function __construct($name)

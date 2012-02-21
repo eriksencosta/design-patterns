@@ -12,7 +12,6 @@ class FlyweightTest extends PHPUnit_Framework_TestCase
         $flyweightA  = Book\FlyweightFactory::createConcreteFlyweight('A');
         $flyweightB1 = Book\FlyweightFactory::createConcreteFlyweight('B');
         $flyweightB2 = Book\FlyweightFactory::createConcreteFlyweight('B');
-        $unsharedFlyweight = Book\FlyweightFactory::createUnsharedConcreteFlyweight();
 
         $this->assertNotSame($flyweightA, $flyweightB1);
         $this->assertSame($flyweightB1, $flyweightB2);
@@ -24,7 +23,13 @@ class FlyweightTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('B (2)', $flyweightB1->operation($context));
         $this->assertEquals('B (2)', $flyweightB2->operation($context));
 
+        $unsharedFlyweightA = Book\FlyweightFactory::createUnsharedConcreteFlyweight();
+
         $context = new Book\FlyweightContext(3);
-        $this->assertEquals('3', $unsharedFlyweight->operation($context));
+        $this->assertEquals('3', $unsharedFlyweightA->operation($context));
+
+        $unsharedFlyweightB = Book\FlyweightFactory::createUnsharedConcreteFlyweight();
+
+        $this->assertNotSame($unsharedFlyweightA, $unsharedFlyweightB);
     }
 }

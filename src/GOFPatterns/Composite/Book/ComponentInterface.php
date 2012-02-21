@@ -52,6 +52,13 @@ interface ComponentInterface
      * "Sharing components" Flyweight shows how to avoid storing parents.
      * "Explicit parent references" can simplify the traversal and management of a composite structure.
      *
+     * From the Flyweight pattern:
+     *
+     * "The Flyweight pattern is often combined with the Composite (163) pattern to represent a hierarchical structure
+     * as a graph with shared leaf nodes. A consequence of sharing is that flyweight leaf nodes cannot store a pointer
+     * to their parent. Rather, the parent pointer is passed to the flyweight as part of its extrinsic state. This has
+     * a major impact on how the objects in the hierarchy communicate with each other."
+     *
      * @param ComponentInterface|null
      */
     function setParent(ComponentInterface $parent = null);

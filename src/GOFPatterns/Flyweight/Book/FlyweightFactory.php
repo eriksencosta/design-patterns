@@ -20,6 +20,10 @@ class FlyweightFactory
         return self::$concreteFlyweights[$key];
     }
 
+    /**
+     * The Flyweight enables sharing, it doesn't enforce it. Creating a non shared Flyweight from the FlyweightFactory
+     * is good since it will prevent changing the client code when making the Flyweight shareable at some time.
+     */
     static public function createUnsharedConcreteFlyweight()
     {
         return new UnsharedConcreteFlyweight();

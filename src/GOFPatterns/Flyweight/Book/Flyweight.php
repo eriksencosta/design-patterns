@@ -13,7 +13,7 @@ abstract class Flyweight
      * a major impact on how the objects in the hierarchy communicate with each other. (consequence)
      *
      * This sample implementation resembles a lot a Strategy as both provides encapsulation for algorithms.
-     * The difference is that a Flyweight is intented to use sharing to support large numbers of fine-grained objects
+     * The difference is that a Flyweight is intended to use sharing to support large numbers of fine-grained objects
      * efficiently. (intent)
      *
      * It's often best to implement State (305) and Strategy (315) objects as flyweights. (related patterns)

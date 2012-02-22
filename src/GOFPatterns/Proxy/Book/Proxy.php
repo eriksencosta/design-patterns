@@ -26,9 +26,12 @@ namespace GOFPatterns\Proxy\Book;
  *
  * The Doctrine ORM and ODM proxies have virtual mocks for the mapped entities/documents. Instead of using a generic
  * proxy, they generate code for the proxies, extending the entity/document class. The identity (only for non-composite
- * key) is cached and when a getter/setter is invoked, it loads the entity/document and stores the reference.
+ * key) is cached and when a getter/setter is invoked, it loads the entity/document and stores the reference. Doctrine
+ * never calls (1) the constructor of an entity.
  *
  * When a composite key is used, the respective UnitOfWork loads the entity/document directly, without using a proxy.
+ *
+ * (1) http://readthedocs.org/docs/doctrine-orm/en/latest/reference/architecture.html#entities
  *
  * See Doctrine ORM and ODM (MongoDB and CouchDB) ProxyFactory class:
  *
